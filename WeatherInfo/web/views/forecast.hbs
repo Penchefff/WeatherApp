@@ -1,0 +1,55 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<div>
+			<p><strong>overall MIN temp: </strong><span>{{min_temp}}</span></p>
+			<p><strong>overall MAX temp: </strong><span>{{max_temp}}</span></p>
+		</div>
+		<div>City
+			<p><strong>name: </strong><span>{{city.name}}</span></p>
+			<p><strong>id: </strong><span>{{city.id}}</span></p>
+			<p><strong>coord lat: </strong><span>{{city.coord.lat}}</span></p>
+			<p><strong>coord lon: </strong><span>{{city.coord.lon}}</span></p>
+			<p><strong>country: </strong><span>{{city.country}}</span></p>
+			<p><strong>population: </strong><span>{{city.population}}</span></p>
+			<p><strong>population sys: </strong><span>{{city.sys.population}}</span></p>
+		</div>
+		<div>
+			<p><strong>cod: </strong><span>{{cod}}</span></p>
+			<p><strong>message: </strong><span>{{message}}</span></p>
+			<p><strong>cnt: </strong><span>{{cnt}}</span></p>
+		</div>
+		<div>
+		{{#each list}}
+			</br>
+			<div>
+				<p><strong>date: </strong><span>{{dt_txt}}</span></p>
+				<p><strong>dt: </strong><span>{{dt}}</span></p>
+				<p><strong>temp: </strong><span>{{main.temp}}</span></p>
+				<p><strong>temp min: </strong><span>{{main.temp_min}}</span></p>
+				<p><strong>temp max: </strong><span>{{main.temp_max}}</span></p>
+				<p><strong>pressure: </strong><span>{{main.pressure}}</span></p>
+				<p><strong>sea level: </strong><span>{{main.sea_level}}</span></p>
+				<p><strong>grnd level: </strong><span>{{main.grnd_level}}</span></p>
+				<p><strong>humidity: </strong><span>{{main.humidity}}</span></p>
+				<p><strong>temp kf: </strong><span>{{main.temp_kf}}</span></p>
+				
+				{{#each weather}}
+					<p><strong>weather id: </strong><span>{{id}}</span></p>
+					<p><strong>weather main: </strong><span>{{main}}</span></p>
+					<p><strong>weather desc: </strong><span>{{description}}</span></p>
+					<p><strong>weather icon: </strong><span>{{iconn}}</span></p>
+				{{/each}}
+				
+				<p><strong>clouds all: </strong><span>{{clouds.all}}</span></p>
+				<p><strong>wind speed: </strong><span>{{wind.speed}}</span></p>
+				<p><strong>wind deg: </strong><span>{{wind.deg}}</span></p>
+				<p><strong>snow h: </strong><span>{{snow.3h}}</span></p>
+				<p><strong>sys pod: </strong><span>{{sys.pod}}</span></p>
+				
+			</div>
+		{{/each}}
+		</div>
+	</body>
+</html>
